@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url "s3://maven.carex.ai/release/"
+            credentials(AwsCredentials) {
+                accessKey "accessKey"
+                secretKey "secretKey"
+            }
+        }
+    }
+}
+rootProject.name = "Carex Application"
+include ':app'

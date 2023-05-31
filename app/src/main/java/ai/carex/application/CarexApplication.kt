@@ -1,0 +1,1 @@
+package ai.carex.applicationimport ai.carex.vitals.CarexVitalsimport android.app.Applicationclass CarexApplication : Application() {    override fun onCreate() {        super.onCreate()        CarexVitals.initialize(getString(R.string.carexVitalsApiKey), getString(R.string.secretKey), applicationContext)    }}
